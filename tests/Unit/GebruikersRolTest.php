@@ -1,12 +1,16 @@
 <?php
 
+namespace Tests\Unit;
+
 use PHPUnit\Framework\TestCase;
+use App\Enums\GebruikersRol;
 
-require_once "GebruikersRol.php"; // Zorg dat je enum-bestand is ingeladen
-
-class EnumTest extends TestCase {
+class GebruikersRolTest extends TestCase {
 
     public function testGebruikersRolValues() {
+        echo GebruikersRol::ADMIN->value;
+        echo GebruikersRol::EDITOR->value;
+        echo GebruikersRol::GEBRUIKER->value;
         $this->assertEquals('admin', GebruikersRol::ADMIN->value);
         $this->assertEquals('editor', GebruikersRol::EDITOR->value);
         $this->assertEquals('gebruiker', GebruikersRol::GEBRUIKER->value);
