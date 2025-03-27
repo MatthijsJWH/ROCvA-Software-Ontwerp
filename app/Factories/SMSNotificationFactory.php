@@ -1,10 +1,10 @@
-<?php 
+<?php
 
 namespace App\Factories;
 
 use App\Models\Notification;
 
-class MailNotificationFactory implements NotificationFactory
+class SMSNotificationFactory
 {
   // Add your code here
 }

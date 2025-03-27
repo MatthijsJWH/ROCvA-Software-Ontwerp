@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class SMSNotification implements Notification
+class SMSNotification
 {
   // Add your code here
 }

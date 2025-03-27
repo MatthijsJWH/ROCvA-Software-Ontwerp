@@ -1,6 +1,6 @@
 <?php
 
-class PushNotification implements Notification
+class PushNotification
 {
   // Add your code here
 }

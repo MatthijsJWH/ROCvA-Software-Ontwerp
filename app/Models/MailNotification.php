@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class MailNotification implements Notification
+class MailNotification
 {
   // Add your code here
 }

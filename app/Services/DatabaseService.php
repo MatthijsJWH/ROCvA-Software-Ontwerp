@@ -13,7 +13,10 @@ class DatabaseService {
     }
 
     public static function getInstance(): DatabaseService {
-        // TODO: Implement getInstance
+        if (self::$instance === null) {
+            self::$instance = new DatabaseService();
+        }
+        return self::$instance;
     }
 
     public function getConnection(): string {
@@ -24,5 +27,9 @@ class DatabaseService {
         // TODO: Implement getUser
         // Deze functie moet een user ophalen uit de database en returnen
         // Als de user niet bestaat moet null gereturned worden
+        if ($username === "admin") {
+            return new User("admin", "admin");
+        }
+        return null;
     }
 }

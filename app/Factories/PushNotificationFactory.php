@@ -1,10 +1,10 @@
-<?php 
+<?php
 
 namespace App\Factories;
 
 use App\Models\Notification;
 
-class PushNotificationFactory implements NotificationFactory
+class PushNotificationFactory
 {
   // Add your code here
 }
