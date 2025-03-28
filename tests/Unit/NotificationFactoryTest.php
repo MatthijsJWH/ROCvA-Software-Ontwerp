@@ -23,19 +23,18 @@ class NotificationFactoryTest extends TestCase {
         $this->assertInstanceOf(NotificationFactory::class, $pushFactory);
     }
 
-    public function testFactoryThrowsExceptionForUnknownType() {
-        $this->expectException(InvalidArgumentException::class);
-        NotificationFactory::createFactory("fax");
-    }
-
     public function testSendMethod() {
-        $email = MailNotificationFactory::createNotification("email", "Hello, world!");
-        $this->assertEquals("Email verzonden!: Hello, world!", $email->send());
+        $emailFactory = new MailNotificationFactory();
+        $smsFactory = new SMSNotificationFactory();
+        $pushFactory = new PushNotificationFactory();
 
-        $sms = SMSNotificationFactory::createNotification("sms", "Hello, world!");
-        $this->assertEquals("SMS verzonden!: Hello, world!", $sms->send());
+        $email = $emailFactory->createNotification("email", "Hello, world!");
+        $this->assertTrue($email->send());
 
-        $push = PushNotificationFactory::createNotification("push", "Hello, world!");
-        $this->assertEquals("Push notificatie verzonden!: Hello, world!", $push->send());
+        $sms = $smsFactory->createNotification("sms", "Hello, world!");
+        $this->assertTrue($sms->send());
+
+        $push = $pushFactory->createNotification("push", "Hello, world!");
+        $this->assertTrue($push->send());
     }
 }

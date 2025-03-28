@@ -6,5 +6,5 @@ interface Notification
 {
   public function __construct(string $message);
 
-  public function send(): void;
+  public function send(): bool;
 }

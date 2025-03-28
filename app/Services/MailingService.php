@@ -23,6 +23,7 @@ class MailingService {
     public function sendMail(User $user, string $message): bool {
         // TODO: Implement sendMail
         // Deze functie moet een mail sturen naar de gebruiker, voor dit voorbeeld mag het een echo zijn
+        // De gebruiker heeft geen email adres, dus ga uit van het sturen naar de username
         // Als het mailen niet actief is moet false gereturned worden
     }
 }
