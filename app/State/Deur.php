@@ -22,5 +22,7 @@ class Deur
         // Als de huidige staat 'Gesloten' is en het evenement is 'ontgrendelen', verander de staat naar 'Open'.
         // Als de huidige staat 'Open' is en het evenement is 'vergrendelen', verander de staat naar 'Gesloten'.
         // Voor elk ongeldig evenement in de huidige staat, geef een foutmelding weer.
+
+        // a test
     }
 }
